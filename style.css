@@ -1,4 +1,9 @@
-
+/* declaring css variable globally */
+:root{
+    --light-color:#fff;
+    --dark-color:#282828;
+    --border-color: #ccc;
+}
 
 * {
     padding: 0;
@@ -18,55 +23,90 @@
 #search-bar input {
     height: 50px;
     border-radius: 20px;
-}
-
-
-
-/* meal card */
-#card {
-    background-color: #FF3044;
-    padding: 10px;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-#card img {
-    border-radius: 50%;
-}
-
-
-/* meal details container */
-#meal-details{
-    width: 100%;
-    padding: 20px;
-    border-radius: 20px;
-    background-color:#FF3044 ;
-}
-#meal-header{
-    width: 70%;
-    margin: auto;
-}
-#meal-thumbail img{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-}
-#details{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
 }
-#meal-instruction{
-    margin: auto;
+body {
+    height: 100vh;
+    background: var(--light-color);
+}
+
+.container {
     text-align: center;
 }
 
+.meal {
+    position: relative;
+    display: flex;
+}
 
+.containers {
+    /* height: 100px;
+    width: 100px; */
+    display: flex;
+}
 
+#recipes-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.recipes {
+    height: 300px;
+    width: 300px;
+    padding: 4px;
+    box-shadow: 0px 0px 2px var(--border-color);
+    margin: 20px;
+    transition: all 200ms ease-in-out;
+}
 
-/* favourites offcanvus */
-#favourites-body{
-    background-color:#212529 ;
+.recipes-titles {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.recipes-images {
+    height: 210px;
+}
+
+.recipes-images img{
+    height: 100%;
+    width: 100%;
+}
+
+.recipes-texts {
+    height: 0px; /* for hover  */
+    visibility: none; /* for hover */
+    opacity: 0; /* for hover */
+    transition: all 200ms ease-in-out;
+    background: #ccc;
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-y: auto; /* scrool bar */
+    transform: scale(.8); /* zoom out effect when we  hover  */
+    transform-origin: top left; /* transition will happen from lest side */
+}
+
+.recipes-texts ul {  /* for unordered lists */
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: left;
+    padding: 5px;
+}
+
+.recipes-texts ul> li {
+    padding: 5px;
+}
+
+.recipes:hover .recipes-texts {
+    height: 120px;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.recipes:hover {
+    height: 420px;
 }
