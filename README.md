@@ -1,4 +1,4 @@
-![Screenshot 2023-12-25 at 7 51 42 PM](https://github.com/Sukesh-Hegde/Meal_API/assets/128299015/9d8f6176-a9c8-4c15-bc9a-fa935b0c9e90)# Meal App
+# Meal App
 
 This is a Meal App that allows users to search for different meals, view meal details, and add/remove meals to/from their favorites list.
 
